@@ -1,4 +1,3 @@
-console.log("\n %c Post-Abstract-AI 开源博客文章摘要AI生成工具 %c https://github.com/zhheo/Post-Abstract-AI \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;")
 var tianliGPTIsRunning = false;
 
 function insertAIDiv(selector) {
@@ -35,18 +34,18 @@ function insertAIDiv(selector) {
 
   const aiTitleTextDiv = document.createElement('div');
   aiTitleTextDiv.className = 'tianliGPT-title-text';
-  aiTitleTextDiv.textContent = 'AI摘要';
+  aiTitleTextDiv.textContent = 'AI TL;NR';
   aiTitleDiv.appendChild(aiTitleTextDiv);
 
   const aiTagDiv = document.createElement('div');
   aiTagDiv.className = 'tianliGPT-tag';
   aiTagDiv.id = 'tianliGPT-tag';
-  aiTagDiv.textContent = 'TianliGPT';
+  aiTagDiv.textContent = 'YaoGPT';
   aiTitleDiv.appendChild(aiTagDiv);
 
   const aiExplanationDiv = document.createElement('div');
   aiExplanationDiv.className = 'tianliGPT-explanation';
-  aiExplanationDiv.innerHTML = '生成中...' + '<span class="blinking-cursor"></span>';
+  aiExplanationDiv.innerHTML = 'Generating...' + '<span class="blinking-cursor"></span>';
   aiDiv.appendChild(aiExplanationDiv); // 将 tianliGPT-explanation 插入到 aiDiv，而不是 aiTitleDiv
 
   // 将创建的元素插入到目标元素的顶部
@@ -167,7 +166,7 @@ var tianliGPT = {
     const punctuationDelayMultiplier = 6;
 
     element.style.display = "block";
-    element.innerHTML = "生成中..." + '<span class="blinking-cursor"></span>';
+    element.innerHTML = "Generating..." + '<span class="blinking-cursor"></span>';
 
     let animationRunning = true;
     let currentIndex = 0;
